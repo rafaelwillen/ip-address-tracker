@@ -3,7 +3,7 @@ import Input from "./Input";
 
 const Header = () => {
   return (
-    <header className="bg-neutral-400 pt-8">
+    <header className="bg-neutral-400 pt-8 pattern-bg">
       <Container>
         <h1 className="text-xl text-neutral-300 text-center">
           IP Address Tracker

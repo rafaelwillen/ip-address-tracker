@@ -5,3 +5,11 @@
 body {
     font-family: 'Rubik', sans-serif;
 }
+
+.pattern-bg {
+    background-image: url("./assets/pattern-bg.png");
+    background-color: #453F9A;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
