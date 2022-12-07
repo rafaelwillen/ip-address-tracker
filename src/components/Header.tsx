@@ -1,4 +1,5 @@
 import { FormEvent, useContext } from "react";
+import toast from "react-hot-toast";
 import { z } from "zod";
 import AppContext from "../context/AppContext";
 import Container from "./Container";
@@ -15,7 +16,7 @@ const Header = () => {
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!ipAddressSchema.safeParse(ipAddress).success) {
-      // TODO: Show Error
+      toast.error("Invalid IP Address");
       return;
     }
     // TODO: Fetch Data
