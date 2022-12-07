@@ -21,7 +21,7 @@ const Input: FC<Props> = ({ onChange, value }) => {
         className="bg-neutral-500 px-6 rounded-r-3xl cursor-pointer transition duration-300 hover:bg-neutral-400"
         title="Search location"
       >
-        <img src={ArrowSVG} alt="Search" />
+        <img src={ArrowSVG} alt="Search" width={11} height={14} />
       </button>
     </div>
   );
