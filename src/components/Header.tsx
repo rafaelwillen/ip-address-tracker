@@ -1,4 +1,5 @@
 import { FormEvent, useContext } from "react";
+import { z } from "zod";
 import AppContext from "../context/AppContext";
 import Container from "./Container";
 import Input from "./Input";
@@ -6,9 +7,18 @@ import Input from "./Input";
 const Header = () => {
   const { ipAddress, setIpAddress } = useContext(AppContext);
 
+  const ipAddressRegex =
+    /^(\b25[0-5]|\b2[0-4][0-9]|\b[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/g;
+
+  const ipAddressSchema = z.string().regex(ipAddressRegex);
+
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-    console.log(ipAddress);
+    if (!ipAddressSchema.safeParse(ipAddress).success) {
+      // TODO: Show Error
+      return;
+    }
+    // TODO: Fetch Data
   };
 
   return (
