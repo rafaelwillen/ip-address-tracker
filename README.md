@@ -23,14 +23,14 @@ Users should be able to:
 - View the optimal layout for each page depending on their device's screen size
 - See hover states for all interactive elements on the page
 - See their own IP address on the map on the initial page load
-- Search for any IP addresses or domains and see the key information and location
+- Search for any IP addresses and see the key information and location
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [IP Address Tracker](https://ip-address-tracker-rafaelwillen.vercel.app/)
+- Solution URL: [Repo](https://github.com/rafaelwillen/ip-address-tracker)
 
 ## My process
 
@@ -44,6 +44,7 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [Vite](https://vitejs.dev/) - Frontend Tooling
 - [Tailwind CSS](https://tailwindcss.com/) - For styles
+- [Mapbox](https://www.mapbox.com/maps/streets) - Map
 
 ## Author
 
