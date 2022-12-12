@@ -49,8 +49,8 @@ const Header = () => {
           </button>
         </form>
         <section
-          className={`bg-neutral-100 rounded-xl text-center py-7 border border-neutral-300 absolute ${
-            isLoading ? "-bottom-10" : "-bottom-[60%]"
+          className={`z-10 bg-neutral-100 rounded-xl text-center py-7 border border-neutral-300 absolute ${
+            isLoading || isIdle ? "-bottom-16" : "-bottom-[60%]"
           } left-1/2 w-11/12 -translate-x-1/2 lg:flex lg:-bottom-1/4 lg:py-10 lg:px-8 lg:text-left lg:justify-center`}
         >
           {isIdle ? (
