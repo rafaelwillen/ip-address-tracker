@@ -7,6 +7,7 @@ import Input from "./Input";
 
 const Header = () => {
   const [ipAddress, setIpAddress] = useState("");
+  const isLoading = true;
 
   const ipAddressRegex =
     /^(\b25[0-5]|\b2[0-4][0-9]|\b[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/g;
@@ -33,11 +34,21 @@ const Header = () => {
         >
           <Input value={ipAddress} onChange={setIpAddress} />
         </form>
-        <section className="bg-neutral-100 rounded-xl text-center py-7 border border-neutral-300 absolute -bottom-[60%] left-1/2 w-11/12 -translate-x-1/2 lg:flex lg:-bottom-1/4 lg:py-10 lg:px-8 lg:text-left">
-          <Card heading="IP Address" value="192.168.1.10" />
-          <Card heading="Location" value="Luanda, Angola" />
-          <Card heading="Timezone" value="UTC +01:00" />
-          <Card heading="ISP" value="SpaceX Starlink" />
+        <section
+          className={`bg-neutral-100 rounded-xl text-center py-7 border border-neutral-300 absolute ${
+            isLoading ? "-bottom-10" : "-bottom-[60%]"
+          } left-1/2 w-11/12 -translate-x-1/2 lg:flex lg:-bottom-1/4 lg:py-10 lg:px-8 lg:text-left lg:justify-center`}
+        >
+          {isLoading ? (
+            <span className="loader"></span>
+          ) : (
+            <>
+              <Card heading="IP Address" value="192.168.1.10" />
+              <Card heading="Location" value="Luanda, Angola" />
+              <Card heading="Timezone" value="UTC +01:00" />
+              <Card heading="ISP" value="SpaceX Starlink" />
+            </>
+          )}
         </section>
       </Container>
     </header>
