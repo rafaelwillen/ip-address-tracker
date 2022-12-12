@@ -1,12 +1,11 @@
-import { FormEvent, useContext } from "react";
+import { FormEvent, useState } from "react";
 import toast from "react-hot-toast";
 import { z } from "zod";
-import AppContext from "../context/AppContext";
 import Container from "./Container";
 import Input from "./Input";
 
 const Header = () => {
-  const { ipAddress, setIpAddress } = useContext(AppContext);
+  const [ipAddress, setIpAddress] = useState("");
 
   const ipAddressRegex =
     /^(\b25[0-5]|\b2[0-4][0-9]|\b[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/g;
@@ -19,7 +18,6 @@ const Header = () => {
       toast.error("Invalid IP Address");
       return;
     }
-    // TODO: Fetch Data
   };
 
   return (
