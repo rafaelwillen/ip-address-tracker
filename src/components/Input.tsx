@@ -8,7 +8,7 @@ type Props = {
 
 const Input: FC<Props> = ({ onChange, value }) => {
   return (
-    <div className="flex max-w-2xl flex-1 ">
+    <div className="flex max-w-2xl w-full ">
       <input
         value={value}
         onChange={(e) => onChange(e.target.value)}
