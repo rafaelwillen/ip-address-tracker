@@ -1,6 +1,7 @@
 import { FormEvent, useState } from "react";
 import toast from "react-hot-toast";
 import { z } from "zod";
+import Card from "./Card";
 import Container from "./Container";
 import Input from "./Input";
 
@@ -21,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-neutral-400 pt-8 pattern-bg">
+    <header className="bg-neutral-400 pt-8 pattern-bg ">
       <Container>
         <h1 className="text-xl text-neutral-200 font-medium text-center lg:text-2xl">
           IP Address Tracker
@@ -32,6 +33,12 @@ const Header = () => {
         >
           <Input value={ipAddress} onChange={setIpAddress} />
         </form>
+        <section className="bg-neutral-100 rounded-xl text-center py-7 border border-neutral-300 absolute -bottom-[60%] left-1/2 w-11/12 -translate-x-1/2">
+          <Card heading="IP Address" value="192.168.1.10" />
+          <Card heading="Location" value="Luanda, Angola" />
+          <Card heading="Timezone" value="UTC +01:00" />
+          <Card heading="ISP" value="SpaceX Starlink" />
+        </section>
       </Container>
     </header>
   );
