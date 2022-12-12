@@ -33,7 +33,7 @@ const Header = () => {
         >
           <Input value={ipAddress} onChange={setIpAddress} />
         </form>
-        <section className="bg-neutral-100 rounded-xl text-center py-7 border border-neutral-300 absolute -bottom-[60%] left-1/2 w-11/12 -translate-x-1/2">
+        <section className="bg-neutral-100 rounded-xl text-center py-7 border border-neutral-300 absolute -bottom-[60%] left-1/2 w-11/12 -translate-x-1/2 lg:flex lg:-bottom-1/4 lg:py-10 lg:px-8 lg:text-left">
           <Card heading="IP Address" value="192.168.1.10" />
           <Card heading="Location" value="Luanda, Angola" />
           <Card heading="Timezone" value="UTC +01:00" />
