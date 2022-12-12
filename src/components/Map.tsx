@@ -35,14 +35,16 @@ const Map: FC<Props> = ({ latitude, longitude }) => {
       style={{ height: "62.5%" }}
       mapStyle="mapbox://styles/mapbox/streets-v9"
     >
-      <Marker
-        longitude={longitude}
-        latitude={latitude}
-        anchor="bottom"
-        draggable={false}
-      >
-        {!isCenterOfMap && <img src={IconArrow} />}
-      </Marker>
+      {!isCenterOfMap && (
+        <Marker
+          longitude={longitude}
+          latitude={latitude}
+          anchor="bottom"
+          draggable={false}
+        >
+          <img src={IconArrow} />
+        </Marker>
+      )}
     </ReactMap>
   );
 };
